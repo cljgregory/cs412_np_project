@@ -8,12 +8,19 @@ The remaining lines describe the graph:
     The vertices are 0-indexed (i.e., the first vertex is 0).
 
 Example Input:
+<br />
 5
+<br />
 1 2 3
+<br />
 0 2 3
+<br />
 0 1 3
+<br />
 0 1 2 4
+<br />
 3
+<br />
 
 First line (5): There are 5 vertices.
 Second line (1 2 3): Vertex 0 is connected to vertices 1, 2, and 3.
