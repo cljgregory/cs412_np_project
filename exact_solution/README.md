@@ -23,6 +23,7 @@ Fifth line (0 1 2 4): Vertex 3 is connected to vertices 0, 1, 2, and 4.
 Sixth line (3): Vertex 4 is connected to vertex 3.
 
 The input would look something like: 
+<br />
 ![plot](./graph.png)
 
 
