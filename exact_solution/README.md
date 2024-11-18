@@ -22,12 +22,12 @@ Example Input:
 3
 <br />
 
-First line (5): There are 5 vertices.
-Second line (1 2 3): Vertex 0 is connected to vertices 1, 2, and 3.
-Third line (0 2 3): Vertex 1 is connected to vertices 0, 2, and 3.
-Fourth line (0 1 3): Vertex 2 is connected to vertices 0, 1, and 3.
-Fifth line (0 1 2 4): Vertex 3 is connected to vertices 0, 1, 2, and 4.
-Sixth line (3): Vertex 4 is connected to vertex 3.
+First line (5): There are 5 vertices. <br />
+Second line (1 2 3): Vertex 0 is connected to vertices 1, 2, and 3. <br />
+Third line (0 2 3): Vertex 1 is connected to vertices 0, 2, and 3. <br />
+Fourth line (0 1 3): Vertex 2 is connected to vertices 0, 1, and 3. <br />
+Fifth line (0 1 2 4): Vertex 3 is connected to vertices 0, 1, 2, and 4. <br />
+Sixth line (3): Vertex 4 is connected to vertex 3. <br />
 
 The input would look something like: 
 <br />
