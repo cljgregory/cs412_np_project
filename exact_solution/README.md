@@ -1,11 +1,11 @@
 # cs412_np_project
-Exact Solution commands and input
-Command: python ./cs412_np_project/exact_solution/min_coloring_exact.py
+Exact Solution commands and input <br />
+Command: python ./cs412_np_project/exact_solution/min_coloring_exact.py <br />
 
-First Line: Number of vertices
-The remaining lines describe the graph:
-    Each line corresponds to a vertex and lists the vertices it is connected to.
-    The vertices are 0-indexed (i.e., the first vertex is 0).
+First Line: Number of vertices <br />
+The remaining lines describe the graph: <br />
+    Each line corresponds to a vertex and lists the vertices it is connected to. <br />
+    The vertices are 0-indexed (i.e., the first vertex is 0).<br />
 
 Example Input:
 <br />
