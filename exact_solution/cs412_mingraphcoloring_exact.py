@@ -2,6 +2,9 @@ import time
 from itertools import product
 
 def main():
+    """
+    Main function for reading input and creating the graph as well as timing the algorithm.
+    """
     # Read number of edges
     num_edges = int(input())
     
@@ -25,7 +28,7 @@ def main():
     # Find the minimum coloring
     min_coloring = find_min_coloring(graph, vertices)
     
-    # Output results in specified format
+    # Print the min coloring, the colors for vertices, and the time taken
     num_colors = len(set(min_coloring.values()))
     print(num_colors)
     for vertex, color in min_coloring.items():
@@ -40,6 +43,16 @@ def main():
 
 # Function to find the minimum coloring
 def find_min_coloring(graph, vertices):
+    """
+    This function finds the minimum coloring of a graph by finding all possible colorings and checking if they are valid.
+    Uses the product function from itertools to generate all possible colorings as discussed in class.
+    Args:
+        graph: A dictionary representing the graph.
+        vertices: A list of vertices in the graph.
+    Returns:
+        A dictionary mapping vertices to colors.
+
+    """
     num_vertices = len(vertices)
     colors = list(range(num_vertices))  # Colors from 0 to num_vertices - 1
     
@@ -51,11 +64,22 @@ def find_min_coloring(graph, vertices):
     
     return {}
 
-# Function to check if a coloring is valid
+
 def is_valid_coloring(graph, coloring):
+    """
+    Function for checking if a graph coloring is valid which should run in polynomial time.
+    Args:
+        graph: A dictionary representing the graph.
+        coloring: A dictionary mapping vertices to colors.
+    Returns:
+        True if the coloring is valid, False otherwise.
+
+    Note: Help for this function was found in a YouTube video by NeuralNine
+    Link: https://www.youtube.com/watch?v=AyrrZ4PCyws
+    """
     for vertex, neighbors in graph.items():
         for neighbor in neighbors:
-            if coloring[vertex] == coloring[neighbor]:  # Adjacent vertices have same color
+            if coloring[vertex] == coloring[neighbor]:
                 return False
     return True
 

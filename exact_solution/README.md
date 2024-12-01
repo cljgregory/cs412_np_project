@@ -1,36 +1,37 @@
 # cs412_np_project
 Exact Solution commands and input <br />
-Command: python ./cs412_np_project/exact_solution/min_coloring_exact.py <br />
+Command: python ./cs412_np_project/exact_solution/cs412_mingraphcoloring_exact.py <br />
 
-First Line: Number of vertices <br />
-The remaining lines describe the graph: <br />
-    Each line corresponds to a vertex and lists the vertices it is connected to. <br />
-    The vertices are 0-indexed (i.e., the first vertex is 0).<br />
+First Line: Number of edges <br />
+The remaining lines describe an edge between 2 vertices in the graph <br />
 
 Example Input:
-<br />
-5
-<br />
-1 2 3
-<br />
-0 2 3
-<br />
-0 1 3
-<br />
-0 1 2 4
-<br />
-3
-<br />
+2 <br />
+a b <br />
+b c <br />
 
-First line (5): There are 5 vertices. <br />
-Second line (1 2 3): Vertex 0 is connected to vertices 1, 2, and 3. <br />
-Third line (0 2 3): Vertex 1 is connected to vertices 0, 2, and 3. <br />
-Fourth line (0 1 3): Vertex 2 is connected to vertices 0, 1, and 3. <br />
-Fifth line (0 1 2 4): Vertex 3 is connected to vertices 0, 1, 2, and 4. <br />
-Sixth line (3): Vertex 4 is connected to vertex 3. <br />
+First line (2): Number of edges in the graph <br />
+Second line (a b): An edge between a and b <br />
+Third Line (b c): An edge between b and c <br />
+ 
+Example Output:
+2 <br />
+a 0 <br />
+b 1 <br />
+c 0 <br />
+Elapsed Time: XXX minutes XXX seconds <br />
 
-The input would look something like: 
-<br />
-![plot](./graph.png)
+First line (2): Minimum number of colors in the graph <br />
+Second line (a 0): Vertex a colored "0" <br />
+Third line (b 1): Vertex b colored "1" <br />
+Fourth line (c 0): Vertex c colored "0" <br />
+Fifith line (Elapsed Time...): Total time taken to run algorithm <br />
+
+All test files are located in "exact_solution/test_cases/inputs" and can be run using the "run_test_cases.sh" script <br />
+Command: ./run_test_cases.sh while in the test_cases folder
+
+
+
+
 
 
