@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to your Python program (adjust if necessary)
-PROGRAM="../cs412_mingraphcoloring_exact.py"
+PROGRAM="../cs412_mingraphcolor_exact.py"
 
 # Directory containing your test cases
 TEST_CASES_DIR="./inputs"
