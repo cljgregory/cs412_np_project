@@ -1,11 +1,5 @@
+import time
 # input a simple undirected graph G with verticies V as well as a list of colors
-
-# for i = 1 to n do
-# set c[i] = to the first color in L[i]
-
-# for each j with i < j and (vi, vj) ! E(G) do
-# Set Lj := Lj/ci
-# Return eah vertex, the color it was assigned, and total the number of colors used
 
 # def greedyColoring(graph):
 #     colors = [-1 for _ in range(len(graph[1]))]
@@ -37,25 +31,12 @@
     # // Step 4: Return the color assignment 
     # return color
     
-    
-# def main():
-#     lines = int(input())
-#     edges = []
-#     verticies = set()
-#     for _ in range(lines):
-#         u, v = input().split()
-#         edges.append(u, v)
-#         verticies.add(u, v)
-        
-#     graph = [edges, verticies]
-        
-#     greedyColoring(graph)
 
 def greedyColoring(graph):
     # Initialize the color dictionary to -1, max amount of colors 
     # are the amount of verticies 
     color = {vertex: -1 for vertex in graph}
-
+    
     # Assign the first color to the first vertex
     first_vertex = next(iter(graph))
     color[first_vertex] = 0
@@ -96,8 +77,7 @@ def process_input(edges):
         graph[v].append(u)
     return graph
 
-
-if __name__ == "__main__":
+def main():
     lines = int(input())
     edges = []
     
@@ -106,9 +86,20 @@ if __name__ == "__main__":
     
     # Process the input
     graph = process_input(edges)
+    
+    # Start the clock to measure the runtime of the algorithm
+    start_time = time.time()
 
     # Perform greedy coloring
     color_assignment = greedyColoring(graph)
+    
+    # Calculate the rutime of the algorithm
+    elapsed_time = time.time() - start_time
+    minutes = elapsed_time // 60
+    seconds = elapsed_time % 60
+
+    # Print the result in minutes and seconds
+    print(f"Elapsed time: {int(minutes)} minutes {round(seconds, 2)} seconds")
 
     # Find the number of colors used
     num_colors = max(color_assignment.values()) + 1
@@ -117,3 +108,6 @@ if __name__ == "__main__":
     print(num_colors)
     for vertex, color in sorted(color_assignment.items()):
         print(vertex, color)
+
+if __name__ == "__main__":
+    main()
