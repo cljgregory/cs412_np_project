@@ -93,13 +93,13 @@ def main():
     # Perform greedy coloring
     color_assignment = greedyColoring(graph)
     
-    # Calculate the rutime of the algorithm
-    elapsed_time = time.time() - start_time
-    minutes = elapsed_time // 60
-    seconds = elapsed_time % 60
+    # # Calculate the rutime of the algorithm
+    # elapsed_time = time.time() - start_time
+    # minutes = elapsed_time // 60
+    # seconds = elapsed_time % 60
 
-    # Print the result in minutes and seconds
-    print(f"Elapsed time: {int(minutes)} minutes {round(seconds, 2)} seconds")
+    # # Print the result in minutes and seconds
+    # print(f"Elapsed time: {int(minutes)} minutes {round(seconds, 2)} seconds")
 
     # Find the number of colors used
     num_colors = max(color_assignment.values()) + 1

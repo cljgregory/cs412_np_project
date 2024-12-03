@@ -1,6 +1,6 @@
 # cs412_np_project
 Exact Solution commands and input <br />
-Command: python ./cs412_np_project/exact_solution/cs412_mingraphcoloring_exact.py <br />
+Command: python ./cs412_np_project/exact_solution/cs412_mingraphcolor_exact.py <br />
 
 First Line: Number of edges <br />
 The remaining lines describe an edge between 2 vertices in the graph <br />
