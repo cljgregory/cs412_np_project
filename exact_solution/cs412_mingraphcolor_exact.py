@@ -47,7 +47,7 @@ class Graph:
         Returns:
             bool: True if a valid coloring is found, False otherwise
         """
-        # Base case: All vertices are processed
+        # Base case
         if index == len(self.vertices):
             return True
 
@@ -55,11 +55,10 @@ class Graph:
         for color in colors: # Loop over the colors
             if self.is_safe(vertex, color_assignment, color): # Using the is_safe function, check if the color is safe
                 color_assignment[vertex] = color # If it is, then assign the color to the vertex
-                if self.graph_color_util(color_assignment, colors, index + 1): # Recursively call the function for the next vertex
+                if self.graph_color_util(color_assignment, colors, index + 1): # Recursively call the function for the next vertex (the index + 1)
                     return True
                 # Backtrack
                 del color_assignment[vertex] # If the color is not safe, backtrack and remove the color assignment
-
         return False
 
     def find_min_coloring(self) -> tuple:
@@ -95,17 +94,16 @@ def main():
     for u, v in edges:
         graph.add_edge(u, v)
 
-    # start_time = time.time()
+    start_time = time.time()
     # Find the minimum coloring
     num_colors, color_assignment = graph.find_min_coloring()
 
     # Print output in the specified format
     print(num_colors)
-    for vertex in vertices:
-        print(f"{vertex} {color_assignment[vertex]}")
+    # for vertex in vertices:
+    #     print(f"{vertex} {color_assignment[vertex]}")
     
-    # print(f"Elapsed time: {time.time() - start_time:.6f} seconds")
-
+    print(f"Elapsed time: {time.time() - start_time:.6f} seconds")
 
 if __name__ == "__main__":
     main()
