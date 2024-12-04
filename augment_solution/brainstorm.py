@@ -11,3 +11,7 @@
 # run two programs (exact/approx) are they the same? are they different? 
 # generate test cases/generate graphs, run the other two programs, 
 # google around for np complete min graph coloring to solve 3sat (reduction)
+
+# REDUCTION
+# 3SAT (input) -> exact solution code for 3 coloring
+# potentially try min graph color -> 3SAT but professor hasn't seen that
