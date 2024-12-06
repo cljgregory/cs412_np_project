@@ -109,5 +109,7 @@ def main():
     for vertex, color in sorted(color_assignment.items()):
         print(vertex, color)
 
+    print(f"Elapsed time: {time.time() - start_time:.6f} seconds")
+
 if __name__ == "__main__":
     main()
