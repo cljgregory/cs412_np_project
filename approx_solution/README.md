@@ -47,4 +47,4 @@ All test files are located in "exact_solution/test_cases/inputs" and can be run 
 Command: ./run_test_cases.sh while in the test_cases folder<br />
 
 Note: test case 12_clique.txt takes more than 20 minutes to run! This applies for the run_test_cases.sh AND <br />
-      the compute_approx_wallclock.sh files<br />
+      the compute_approx_wallclock.sh files.<br />
