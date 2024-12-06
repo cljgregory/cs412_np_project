@@ -28,6 +28,8 @@ All test files are located in "approx_solution/test_cases". Instructions:<br />
   - For all test cases:<br />
     - Run the "run_test_cases.sh" file.<br />
     - Command: ./run_test_cases.sh<br />
+    - Note: for the large test cases, the .sh file will show that it runs fast and produces a number of colors
+            but not show the vertex coloring (because it takes up a ton of space)<br />
     - Reminders: make sure that you are in the test_cases folder. You may need to build the file, if so, <br />
                  use this command: chmod +x run_test_cases.sh<br />
   - For the non_optimal case:<br />
