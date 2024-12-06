@@ -1,4 +1,4 @@
-17
+27
 a b
 a c
 a d
@@ -16,3 +16,13 @@ e i
 e f
 f h
 g h
+g i
+h j
+e g
+f i
+i j
+a e
+b g
+c i
+d h
+a f

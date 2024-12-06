@@ -3,7 +3,7 @@
 # to build, use this command: chmod +x run_test_cases.sh
 
 # Path to your Python program (adjust if necessary)
-PROGRAM="../cs412_mingraphcolor_approx.py"
+PROGRAM="../cs412_mingraphcolor_exact.py"
 
 # Directory containing your test cases
 TEST_CASES_DIR="./inputs"

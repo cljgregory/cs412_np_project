@@ -46,6 +46,8 @@ class Graph:
             index (int): The index of the vertex to process
         Returns:
             bool: True if a valid coloring is found, False otherwise
+
+        Note: test case 12_clique.txt and 216_clique.txt take more than 20 minutes to run
         """
         # Base case
         if index == len(self.vertices):
