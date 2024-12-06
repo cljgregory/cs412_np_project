@@ -1,0 +1,7 @@
+Test Case	Exact Colors	Approx Colors	Augment Colors	Exact Time	Approx Time	Augment Time	Lower Bound	Upper Bound
+bipartite_k_3_4.txt	2	2	2	0.000023 seconds	0.000029 seconds	0.000078 seconds	2	5
+non_optimal_v15_e200_2.txt	7	9	8	232.208240 seconds	0.000225 seconds	0.000543 seconds	3	19
+non_optimal_v15_e200.txt	6	7	6	5.332889 seconds	0.000092 seconds	0.000521 seconds	3	20
+non_optimal_v5_e6.txt	3	4	3	0.000032 seconds	0.000025 seconds	0.000052 seconds	3	4
+wheel_w6.txt	4	4	4	0.000103 seconds	0.000039 seconds	0.000058 seconds	3	6
+wheel_w7.txt	3	3	3	0.000037 seconds	0.000027 seconds	0.000067 seconds	3	7

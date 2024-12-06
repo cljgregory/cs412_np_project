@@ -1,0 +1,71 @@
+# AUSTIN PERDUE
+# ------------------------ DR MOLLOY SUGGESTIONS FOR AUGMENTING APPROX SOLUTION  (BRAINSTORMING)------------------------ #
+# FOR MIN GRAPH COLORING NP PROJECT
+
+# lower bound, papers about lower bounding, 
+# lower bound (doesn't hve to be the best lower bound), 
+# compare approximation, show how they differ, 
+# discuss how they differ, max clique = min color, 
+# talk about how they're related, max clique and min color are the same problem, 
+# generate a bunch of test cases how long to break approximation algorithm, 
+# exact solution should run in a reasonably amount of time, 
+# run two programs (exact/approx) are they the same? are they different? 
+# generate test cases/generate graphs, run the other two programs, 
+# google around for np complete min graph coloring to solve 3sat (reduction)
+
+# REDUCTION
+# 3SAT (input) -> exact solution code for 3 coloring (can't do this, as part A is already doing it)
+# potentially try min graph color -> 3SAT but professor hasn't seen that (may not be useful)
+
+# ------------------------ END OF BRAINSTORMING ------------------------ #
+
+# ------------------------ AUGMENTING APPROX SOLUTION NOTES ------------------------ #
+
+# general outline for augmenting approx solution
+# briefly recap min graph coloring problem, discuss NP-completeness and real world applications
+# discuss exact vs approx solutions, explain bruteforce/backtracking approach, show an example with small graphs inputs
+# for discussing approx solution, describe greedy algorithm, show pseudocode, discuss polynomial runtime and scalability,
+# show an example where it performs well and a case wher eit uses more colors than optimal (chromatic number).
+
+# then introduce DSATUR algorithm, explain the heuristic, show pseudocode, describe how it enhances the standard greedy approach
+# highlight why DSATUR is an improvement over greedy, show empirical analysis with graphs
+
+# present Big O runtime of exact solution O(b^n) where b is branching factor versus
+# approximation O(V+E) vs DSATUR O(V+E) with additional overhead for saturation tracking
+# show plots from comparison_results.tsv runtime plot: exact vs approx vs augment
+# show color count plot: exact vs approx vs augment
+# discuss scenarios of where DSATUR outperforms greedy and where it doesn't
+
+# summarize the benefits of augmenting the approx solution with DSATUR,
+# mention potential future improvements or other augmentation strategies
+
+# -------------
+# notes: DSatur
+# heuristic for graph coloring
+# initialization: no vertices are colored initially
+# each vertex has a "saturation degree" which is the number of differently colored neighbors it currently has
+# selection step: at each step, choose the vertex with the highest saturation degree to color next
+# if there is a tie, break ties by choosing the vertex with the highest degree
+# coloring step: assign the lowest possible color that does not conflict with any of its currently colored neighbors
+# update the saturation degrees of the neighboring vertices (if a new color is added to their neighborhood)
+# repeat until all vertices are colored
+# -------------
+
+# notes: upper/lower bounds
+# lower bound: size of the largest clique in the graph, but that is NP-complete to find, but we might find a smaller clique or use
+# a quick heuristic to find a lower bound on clique size.
+# Dr. Molloy mentioned he wants a bound that is polynomial time computable. lower bound = size of the largest clique you can find quickly
+# (not necessarily the max clique, just a heuristic that finds a clique). this will at least guarantee that the actual solution cannot
+# have fewer colors than that clique size.
+# upper bound: might be the result of a fast approximation method (like the greedy approx solution) or a known simple upper bound
+#  (delta + 1 colors where delta is the max degree of a vertex in the graph)
+
+# explain what a chromatic number is, and how it relates to the min graph coloring problem
+# theorem 4.4.2: the four color theorem, any planar graph is 4-colorable
+# if G is a planar graph, then the chromatic number of G is less than or equal to 4. thus, any map can be colored with 4 colors or fewer colors.
+# a clique in a graph is a set of vertices all of which are pairwise adjacent. the chromatic number of a graph is at least the size of the largest clique in the graph.
+# theorem 4.4.4: the chromatic number of a graph G is at least the clique number of G.
+# a planar graph is a connected graph that can be drawn in which the edges to not cross.
+# a proper vertex coloring or proper coloring of a graph G is the assignment of colors to the vertices such that all adjacent vertices have different colors.
+# the chromatic number of a grpah g is the smallest number of colors needed to properly color the graph.
+# theorem 4.4.5: Brooks' theorem, any graph G satisfies x(G) <= delta(G) unless G is a complete graph or an odd cycle, in which case x(G) <= delta(G) + 1
